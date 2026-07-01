@@ -190,37 +190,6 @@ Update `config/config.py` with your database credentials and paths.
 
 ---
 
-## � Experimental Results
-
-### Triple-Modal Multi-Hop Benchmark Results
-
-As shown in Table 1, the experimental results on the triple-modal multi-hop QA benchmarks demonstrate that DynamicRAG achieves the best or second performance across both the ChainHopQA and HotpotQA (Reconstruction) datasets. Specifically, on the Str-Acc metric, DynamicRAG attains 27.6% and 27.5% on ChainHopQA and HotpotQA, respectively, outperforming all baseline graph-based and agentic RAG methods. On the LLM-Acc metric, DynamicRAG achieves the best result of 39.1% on HotpotQA, while on ChainHopQA it reaches 30.3%, which is second only to IRCoT (31.1%). In conclusion, compared to current leading agentic RAG methods such as IRCoT and LogicRAG, DynamicRAG demonstrates more stable overall performance and higher comprehensive accuracy in multimodal scenarios, validating the effectiveness of its dynamic DAG planning and multimodal retrieval fusion mechanisms.
-
-![Table 1: Triple-modal Multi-Hop Benchmark Results](./figure/table1.png)
-
-**Table 1**: Triple-modal Multi-Hop Benchmark Results. The Bold and the Underlined numbers indicate the best performance and the second-best performance among all models, respectively.
-
-### Single-Modal Multi-Hop Benchmark Results
-
-To verify the generalizability of DynamicRAG's core mechanisms, DynamicRAG-Text is evaluated on single-modality scenarios. As shown in Table 2, DynamicRAG-Text achieves competitive or slightly better performance compared to LogicRAG and HippoRAG2 across three standard multi-hop reasoning benchmarks. This demonstrates that the core mechanisms—node type pre-allocation and dynamic switching—have broad applicability beyond multimodal scenarios, validating their effectiveness as general design principles for RAG systems.
-
-![Table 2: Single-Modal Multi-Hop Benchmark Results](./figure/table2.png)
-
-**Table 2**: Single-Modal Multi-Hop Benchmark Results. The Bold and the Underlined numbers indicate the best performance and the second-best performance among all models, respectively.
-
-### Ablation Studies
-
-![Multimodal Fusion Ablation Study](./figure/figure2.png)
-
-**Figure 2**: Ablation study on retrieval modalities shows that the full DynamicRAG system with multimodal fusion outperforms single-modal.
-
-![System Mechanisms Ablation Study](./figure/figure3.png)
-
-**Figure 3**: Ablation study on core mechanisms demonstrates:
-- **Dynamic switching** is crucial: 6.4% Str-Acc drop on ChainHopQA when disabled
-- **LLM-based planning** provides moderate benefits
-- Full system achieves optimal performance
-
 ## �� Core Innovations
 
 ### 1. DAG-Based Query Decomposition
@@ -321,7 +290,7 @@ If you use DynamicRAG in your research, please cite:
 
 ```bibtex
 @article{dynamicrag2025,
-  title={DynamicRAG: An Adaptive DAG-based Multimodal Retrieval-Augmented Generation Framework for Fragmented Industrial Knowledge},
+  title={Adaptive DAG-Driven Multimodal Retrieval-Augmented Generation for Manufacturing Supply Chain Knowledge},
   author={DynamicRAG Development Team},
   year={2025}
 }
